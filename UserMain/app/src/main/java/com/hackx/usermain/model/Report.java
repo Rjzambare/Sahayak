@@ -1,17 +1,17 @@
 package com.hackx.usermain.model;
 
-public class Report {
+import java.io.Serializable;
+
+public class Report implements Serializable {
     private String id;
     private String name;
-    private String text;
 
     public Report() {
     }
 
-    public Report(String id, String name, String text) {
+    public Report(String id, String name) {
         this.id = id;
         this.name = name;
-        this.text = text;
     }
 
     public String getId() {
@@ -28,13 +28,5 @@ public class Report {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getText() {
-        return text;
-    }
-
-    public void setText(String text) {
-        this.text = text;
     }
 }

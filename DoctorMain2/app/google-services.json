@@ -1,0 +1,86 @@
+{
+  "project_info": {
+    "project_number": "256301486788",
+    "project_id": "hackx-7b82c",
+    "storage_bucket": "hackx-7b82c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:256301486788:android:c0fd68b816b4592f0fef91",
+        "android_client_info": {
+          "package_name": "com.hackx.doctormain"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANxwi48sEtTeV9ROpFoLAj9F1TOkl3SbU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:256301486788:android:3efa3b2e5075f88f0fef91",
+        "android_client_info": {
+          "package_name": "com.hackx.textconversion"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANxwi48sEtTeV9ROpFoLAj9F1TOkl3SbU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:256301486788:android:6660ed1bc34a37ca0fef91",
+        "android_client_info": {
+          "package_name": "com.hackx.user"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANxwi48sEtTeV9ROpFoLAj9F1TOkl3SbU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:256301486788:android:f39755c8a00b85160fef91",
+        "android_client_info": {
+          "package_name": "com.hackx.usermain"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANxwi48sEtTeV9ROpFoLAj9F1TOkl3SbU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

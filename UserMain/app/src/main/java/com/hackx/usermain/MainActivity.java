@@ -11,6 +11,13 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.hackx.usermain.auth.LoginActivity;
 import com.hackx.usermain.bot.BotActivity;
 import com.hackx.usermain.databinding.ActivityMainBinding;
+import com.hackx.usermain.doctor.ConnectActivity;
+import com.hackx.usermain.doctor.DoctorActivity;
+import com.hackx.usermain.model.Report;
+import com.hackx.usermain.report.ReportActivity;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -44,5 +51,27 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, BotActivity.class));
             }
         });
+
+        binding.report.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, ReportActivity.class));
+            }
+        });
+
+        binding.meetDoctor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, DoctorActivity.class));
+            }
+        });
+
+        binding.profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, ConnectActivity.class));
+            }
+        });
+
     }
 }
