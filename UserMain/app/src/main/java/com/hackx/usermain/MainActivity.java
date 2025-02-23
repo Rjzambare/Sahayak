@@ -36,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseFirestore = FirebaseFirestore.getInstance();
 
+        binding.greeting.setText(Constants.name);
+
         binding.btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,6 +54,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        binding.rlBot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, BotActivity.class));
+            }
+        });
+
         binding.report.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -62,14 +71,14 @@ public class MainActivity extends AppCompatActivity {
         binding.meetDoctor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, DoctorActivity.class));
+                startActivity(new Intent(MainActivity.this, ConnectActivity.class));
             }
         });
 
         binding.profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, ConnectActivity.class));
+                startActivity(new Intent(MainActivity.this, ProfileActivity.class));
             }
         });
 

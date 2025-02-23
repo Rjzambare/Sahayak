@@ -30,7 +30,6 @@ public class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ReportView
     @Override
     public void onBindViewHolder(@NonNull ReportViewHolder holder, int position) {
         Report report = reportList.get(position);
-        holder.textViewId.setText(report.getId());
         holder.textViewName.setText(report.getName());
     }
 
@@ -40,11 +39,10 @@ public class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ReportView
     }
 
     public static class ReportViewHolder extends RecyclerView.ViewHolder {
-        TextView textViewId, textViewName;
+        TextView textViewName;
 
         public ReportViewHolder(@NonNull View itemView) {
             super(itemView);
-            textViewId = itemView.findViewById(R.id.id);
             textViewName = itemView.findViewById(R.id.name);
         }
     }

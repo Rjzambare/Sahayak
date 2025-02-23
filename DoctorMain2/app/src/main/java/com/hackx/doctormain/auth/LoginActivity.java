@@ -13,8 +13,12 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.hackx.doctormain.ConnectActivity;
 import com.hackx.doctormain.MainActivity;
 import com.hackx.doctormain.databinding.ActivityLoginBinding;
+import com.hackx.doctormain.model.Doctor;
+
+import java.util.UUID;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -43,7 +47,7 @@ public class LoginActivity extends AppCompatActivity {
                     .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                         @Override
                         public void onSuccess(AuthResult authResult) {
-                            startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                            startActivity(new Intent(LoginActivity.this, ConnectActivity.class));
                             finish();
                         }
                     }).addOnFailureListener(new OnFailureListener() {
@@ -62,7 +66,7 @@ public class LoginActivity extends AppCompatActivity {
         if (firebaseAuth.getCurrentUser() != null) {
             new Handler().postDelayed(new Runnable() {
                 public void run() {
-                    startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                    startActivity(new Intent(LoginActivity.this, ConnectActivity.class));
                     finish();
                 }
             }, 200);

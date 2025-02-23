@@ -5,23 +5,61 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#141414"
     android:orientation="vertical"
+    android:padding="20dp"
     tools:context=".doctor.ConnectActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center_horizontal"
+            android:text="Connect Now"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#c7ccd4" />
+
+    </LinearLayout>
+
 
     <EditText
         android:id="@+id/conferenceName"
         android:layout_width="match_parent"
-        android:layout_height="52dp"
-        android:layout_margin="12dp"
-        android:hint="Enter room name" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edittext_drawable"
+        android:fontFamily="@font/poppins_medium"
+        android:hint="Enter room name"
+        android:padding="12dp" />
 
     <Button
+        android:id="@+id/btnLogin"
         android:layout_width="match_parent"
-        android:layout_height="52dp"
-        android:layout_margin="12dp"
-        android:background="#0F9D58"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button_drawable"
+        android:fontFamily="@font/poppins_semibold"
         android:onClick="onButtonClick"
-        android:text="Join"
-        android:textColor="#FFFFFF" />
+        android:padding="15dp"
+        android:text="Join Now"
+        android:textColor="@color/white"
+        android:textSize="17dp" />
+
 
 </LinearLayout>

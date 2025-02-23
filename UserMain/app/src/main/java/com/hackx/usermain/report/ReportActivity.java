@@ -2,6 +2,7 @@ package com.hackx.usermain.report;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
@@ -35,6 +36,9 @@ public class ReportActivity extends AppCompatActivity {
     private FirebaseAuth firebaseAuth;
     private FirebaseFirestore firebaseFirestore;
 
+    private ReportAdapter adapter;
+    private List<Report> reports;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,12 +49,16 @@ public class ReportActivity extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseFirestore = FirebaseFirestore.getInstance();
 
+        reports = new ArrayList<>();
+        adapter = new ReportAdapter(reports);
+
+        getD();
+    }
+
+    private void getD() {
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
-        List<Report> reports = new ArrayList<>();
-        ReportAdapter adapter = new ReportAdapter(reports);
 
         String email = firebaseAuth.getCurrentUser().getEmail();
-
         firebaseFirestore
                 .collection("users")
                 .document(email)
@@ -64,7 +72,8 @@ public class ReportActivity extends AppCompatActivity {
                             String name = document.getString("name");
                             reports.add(new Report(id, name));
                         }
-                        adapter.notifyDataSetChanged();                    }
+                        adapter.notifyDataSetChanged();
+                    }
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {

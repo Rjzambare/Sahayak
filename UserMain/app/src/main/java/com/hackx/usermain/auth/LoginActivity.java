@@ -15,6 +15,9 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.hackx.usermain.MainActivity;
 import com.hackx.usermain.databinding.ActivityLoginBinding;
+import com.hackx.usermain.model.Doctor;
+
+import java.util.UUID;
 
 public class LoginActivity extends AppCompatActivity {
 

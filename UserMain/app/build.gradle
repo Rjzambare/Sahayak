@@ -53,5 +53,4 @@ dependencies {
 
     implementation("org.jitsi.react:jitsi-meet-sdk:10.1.2")
 
-
 }
